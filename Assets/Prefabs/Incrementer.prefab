@@ -143,6 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8661915094695851083}
+  - component: {fileID: 6783655571112064219}
   m_Layer: 5
   m_Name: Incrementer
   m_TagString: Untagged
@@ -172,6 +173,19 @@ RectTransform:
   m_AnchoredPosition: {x: 50.07, y: -0.0000019073}
   m_SizeDelta: {x: 100, y: 27.701}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6783655571112064219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157784821028293134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3d4831d94f741ae9ee7858a5d0601a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {fileID: 6446533167427271292}
 --- !u!1 &3837798409951810058
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +577,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3057415510899388572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6783655571112064219}
+        m_TargetAssemblyTypeName: Incrementer, Assembly-CSharp
+        m_MethodName: Increment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7036509870400279583
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +710,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1322486542565710369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6783655571112064219}
+        m_TargetAssemblyTypeName: Incrementer, Assembly-CSharp
+        m_MethodName: Decrement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7951965384057001868
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
   m_sharedMaterial: {fileID: -6460770133986459156, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}

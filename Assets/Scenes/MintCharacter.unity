@@ -637,15 +637,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
+  m_sharedMaterial: {fileID: -6460770133986459156, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -662,8 +662,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mint character to proceed (1/2)
+  m_text: Mint character to proceed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
   m_sharedMaterial: {fileID: -6460770133986459156, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
@@ -1281,7 +1281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 429362085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1701143866}
+        m_TargetAssemblyTypeName: MintCharacter, Assembly-CSharp
+        m_MethodName: Mint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &429362085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,6 +1653,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8661915094695851083, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
   m_PrefabInstance: {fileID: 781347613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &781347615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6446533167427271292, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
+  m_PrefabInstance: {fileID: 781347613}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &841019519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,8 +2689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: -300, y: -170}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: -300, y: -190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1062330427
 MonoBehaviour:
@@ -3844,6 +3867,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8661915094695851083, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
   m_PrefabInstance: {fileID: 1554030503}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1554030505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6446533167427271292, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
+  m_PrefabInstance: {fileID: 1554030503}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564204536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,8 +4207,9 @@ GameObject:
   - component: {fileID: 1701143864}
   - component: {fileID: 1701143863}
   - component: {fileID: 1701143862}
+  - component: {fileID: 1701143866}
   m_Layer: 5
-  m_Name: Mint
+  m_Name: MintPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4263,6 +4298,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1701143866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701143861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95d075fea6f141e8b65090cf80f8c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: {fileID: 2052404435}
+  strategyClassHash: {fileID: 172848512}
+  strength: {fileID: 5080110626249475618}
+  agility: {fileID: 2128086685}
+  vitality: {fileID: 781347615}
+  stamina: {fileID: 1554030505}
 --- !u!1 &1733729038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,7 +4532,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1766331985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1701143866}
+        m_TargetAssemblyTypeName: MintCharacter, Assembly-CSharp
+        m_MethodName: Cancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1766331985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,15 +4985,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
+  m_sharedMaterial: {fileID: -6460770133986459156, guid: 88e5956158b7140c0aa7f8103d0414d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4945,8 +5010,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5297,6 +5362,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8661915094695851083, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
   m_PrefabInstance: {fileID: 2128086683}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2128086685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6446533167427271292, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
+  m_PrefabInstance: {fileID: 2128086683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5080110626249475617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5394,6 +5470,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
+--- !u!114 &5080110626249475618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6446533167427271292, guid: 025d08df1c8924e92b4a6a0408ad378a, type: 3}
+  m_PrefabInstance: {fileID: 5080110626249475617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

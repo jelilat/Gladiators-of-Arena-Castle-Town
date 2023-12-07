@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class WalletConnect : MonoBehaviour
 {
     public static string playerAddress;
+    public GameObject walletSelector;
+    public GameObject connectButton;
     private IEnumerator ConnectWalletAsync(Action connectWalletFunction)
     {
         // Call the JavaScript method to connect the wallet
@@ -18,17 +20,26 @@ public class WalletConnect : MonoBehaviour
         PlayerPrefs.SetString("playerAddress", playerAddress);
         Debug.Log("Connected to wallet: " + playerAddress);
 
-        // Load the game scene
-        SceneManager.LoadScene("DeclareClassHash");
+        // Load the MintCharacter scene
+        SceneManager.LoadScene("MintCharacter");
+    }
+
+    public void ConnectWallet()
+    {
+        Debug.Log("Connecting wallet...");
+        connectButton.SetActive(false);
+        walletSelector.SetActive(true);
     }
 
     public void OnButtonConnectWalletArgentX()
     {
+        PlayerPrefs.SetString("walletType", "ArgentX");
         StartCoroutine(ConnectWalletAsync(JSInteropManager.ConnectWalletArgentX));
     }
 
     public void OnButtonConnectWalletBraavos()
     {
+        PlayerPrefs.SetString("walletType", "Braavos");
         StartCoroutine(ConnectWalletAsync(JSInteropManager.ConnectWalletBraavos));
     }
 
@@ -39,9 +50,6 @@ public class WalletConnect : MonoBehaviour
         {
             playerAddress = PlayerPrefs.GetString("playerAddress");
             Debug.Log("Connected to wallet: " + playerAddress);
-
-            // Load the game scene
-            SceneManager.LoadScene("DeclareClassHash");
         }
         bool available = JSInteropManager.IsWalletAvailable();
         if (!available)
