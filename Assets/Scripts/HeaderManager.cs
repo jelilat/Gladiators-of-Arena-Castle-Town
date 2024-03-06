@@ -19,9 +19,12 @@ public class HeaderManager : MonoBehaviour
         // make the address uppercase
         playerAddress = playerAddress.ToUpper();
 
-        // truncate the address
-        string truncatedPlayerAddress = playerAddress.Substring(0, 6) + "..." + playerAddress.Substring(playerAddress.Length - 4, 4);
-        playerAddressText.text = truncatedPlayerAddress;
+        if (playerAddress.Length != 0)
+        {
+            // truncate the address
+            string truncatedPlayerAddress = playerAddress.Substring(0, 6) + "..." + playerAddress.Substring(playerAddress.Length - 4, 4);
+            playerAddressText.text = truncatedPlayerAddress;
+        }
     }
 
     // Update is called once per frame

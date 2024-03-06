@@ -44,6 +44,7 @@ public class MintCharacter : MonoBehaviour
 
     void MintCharacterToken(string characterName, string strength, string agility, string vitality, string stamina, string strategyClassHash)
     {
+        Debug.Log(strategyClassHash);
         string[] calldata = new string[] {
             characterName,
             strength,
@@ -51,7 +52,7 @@ public class MintCharacter : MonoBehaviour
             vitality,
             stamina,
             "0x0057dfdc7b7f813288e54f6a2ea0d2077f7c54a643620ef2b8074a58589c959d"
-        };
+        }; // TODO: Remove hardcoded strategy class hash
         string calldataString = JsonUtility.ToJson(new ArrayWrapper { array = calldata });
         string walletType = PlayerPrefs.GetString("walletType");
         Debug.Log(calldataString);
@@ -72,6 +73,7 @@ public class MintCharacter : MonoBehaviour
     void MintCharacterCallback(string transactionHash)
     {
         Debug.Log("https://goerli.voyager.online/tx/" + transactionHash);
+        SceneManager.LoadScene("Arena");
     }
 
     public void Cancel()

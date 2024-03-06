@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MintCharacter.unity
     guid: 611c868390ce34cd994d43c351b94fa5
+  - enabled: 1
+    path: Assets/Scenes/Arena.unity
+    guid: fe2511042b38844da8e65857efeeca01
   m_configObjects: {}
